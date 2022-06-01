@@ -52,4 +52,4 @@ ARQUITETURA FISCAL EM SOFTWARE <https://arquiteturafiscal.online>
 
 ## Licença
 
-MIT
+GPL
