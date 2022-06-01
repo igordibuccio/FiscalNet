@@ -1,5 +1,5 @@
 # FiscalNet
-## Brazilian Tax Library
+## Biblioteca de cálculos fiscais
 
 ![Badge](https://img.shields.io/static/v1?label=csharp&message=language&color=blue&style=for-the-badge&logo=csharp)
 ![Badge](https://img.shields.io/static/v1?label=.net6&message=framework&color=blue&style=for-the-badge&logo=.net)
@@ -7,22 +7,22 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-## About 
-  This project is a library that helps the implementation of tax calculations for issuing electronic tax documents in Brazil. Calculation of ICMS, ICMS-ST, IPI, PIS and COFINS.
+## Sobre o projeto 
+  Este projeto é uma biblioteca que auxilia na implementação de cálculos tributários para emissão de documentos fiscais eletrônicos no Brasil. Cálculo de ICMS, ICMS-ST, IPI, PIS e COFINS.
 
-This project is built using the CSharp language with .Net Standard and has the test project validating the results. 
+Este projeto é mantido utilizando a linguagem CSharp com .Net Standard e tem o projeto de teste validando os resultados. 
 
-## Features
+## Recursos
 
-- ICMS calculation
-- ICMS-ST calculation
-- IPI calculation
-- PIS calculation
-- COFINS calculation
+- ICMS
+- ICMS-ST
+- IPI
+- PIS
+- COFINS
 
-We recommend that the calculations be validated by the accountant of the company that will use the library.
+Recomendamos que os cálculos sejam validados pelo contador da empresa que utilizará a biblioteca.
 
-## Use
+## Utilização
 ```sh
 Icms00 icms00 = new Icms00(valorProduto, valorFrete, valorSeguro, despesasAcessorias,
                                        valorIpi, valorDesconto, aliquotaIcmsProprio);
@@ -32,12 +32,12 @@ decimal vBC = icms00.BaseIcmsProprio();
 decimal vICMS = icms00.ValorIcmsProprio();
 ```
 
-## Support
+## Suporte
 <img src="https://www.sacfiscal.com.br/biosac64.png">
-Our company is specialized in tax and technical support for software houses. 
-Access: https://www.sacfiscal.com.br
+Nossa empresa é especializada em suporte técnico e tributário para software houses.
+Acesse: https://www.sacfiscal.com.br
 
-| Techs we are supported | Frameworks |
+| Tecnologias | Frameworks |
 | ------ | ------ |
 | C# | ZeusDFe <https://github.com/ZeusAutomacao/DFe.NET> UniNFe <https://github.com/Unimake/DFe> OpenAC <https://github.com/OpenAC-Net> |
 | Delphi | ACBr <https://projetoacbr.com.br/> |
@@ -45,6 +45,6 @@ Access: https://www.sacfiscal.com.br
 | PHP | SPEDNFe <https://github.com/nfephp-org/sped-nfe> |
 
 
-## License
+## Licença
 
 MIT
