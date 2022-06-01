@@ -39,7 +39,7 @@ Access: https://www.sacfiscal.com.br
 
 | Techs we are supported | Frameworks |
 | ------ | ------ |
-| C# | ZeusDFe <https://github.com/ZeusAutomacao/DFe.NET> & UniNFe <https://github.com/Unimake/DFe> |
+| C# | ZeusDFe <https://github.com/ZeusAutomacao/DFe.NET> UniNFe <https://github.com/Unimake/DFe> OpenAC <https://github.com/OpenAC-Net> |
 | Delphi | ACBr <https://projetoacbr.com.br/> |
 | Lazarus | ACBr <https://projetoacbr.com.br/> |
 | PHP | SPEDNFe <https://github.com/nfephp-org/sped-nfe> |
