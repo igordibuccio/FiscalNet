@@ -17,7 +17,7 @@ namespace FiscalNet.Implementacoes.Icms
 
         public decimal CalcularValorIcmsProprio()
         {
-            return decimal.Round((AliquotaIcmsProprio / 100 * BaseCalculo),2);
+            return decimal.Round((AliquotaIcmsProprio / 100 * BaseCalculo),2, MidpointRounding.ToEven);
         }
     }
 }

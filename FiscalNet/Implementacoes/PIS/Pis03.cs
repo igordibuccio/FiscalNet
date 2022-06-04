@@ -20,7 +20,7 @@ namespace FiscalNet.Implementacoes.PIS
 
         public decimal ValorPis()
         {
-            return decimal.Round((AliquotaPorUnidade * BaseCalculo), 2);
+            return decimal.Round((AliquotaPorUnidade * BaseCalculo), 2, MidpointRounding.ToEven);
         }
     }
 }

@@ -48,6 +48,8 @@ namespace FiscalNet.Implementacoes.Icms
                 DespesasAcessorias, ValorDesconto);                        
         }
 
+        
+
         #region ICMS Próprio
         public decimal BaseIcmsProprio()
         {
@@ -64,8 +66,7 @@ namespace FiscalNet.Implementacoes.Icms
         {
             if(PercentualReducaoST == 0)
             {
-                this.BCIcmsST = new BaseIcmsST(BaseIcmsProprio(), Mva, ValorIpi);
-                return BCIcmsST.CalcularBaseIcmsST();
+                return BaseIcmsSTNormal();
             }
             else
             {
@@ -73,24 +74,31 @@ namespace FiscalNet.Implementacoes.Icms
                                                 PercentualReducaoST, ValorIpi);
                 return BCReduzidaIcmsST.CalcularBaseReduzidaIcmsST();
             }                        
-        }        
+        }
+
+        private decimal BaseIcmsSTNormal()
+        {
+            this.BCIcmsST = new BaseIcmsST(BaseIcmsProprio(), Mva, ValorIpi);
+            return BCIcmsST.CalcularBaseIcmsST();
+        }
+
+        private decimal ValorIcmsSTNormal(decimal baseIcmsST)
+        {
+            return new ValorIcmsST(baseIcmsST, AliquotaIcmsST, ValorIcmsProprio()).CalcularValorIcmsST();
+        }
 
         public decimal ValorIcmsST()
         {
-            return new ValorIcmsST(BaseIcmsST(), AliquotaIcmsST, ValorIcmsProprio()).CalcularValorIcmsST();
+            return ValorIcmsSTNormal(BaseIcmsST());
         }
 
         public decimal ValorICMSSTDesonerado()
         {
-            Icms10 icms10 = new Icms10(ValorProduto, ValorFrete, ValorSeguro,
-                                     DespesasAcessorias, ValorIpi, ValorDesconto, AliquotaIcmsProprio,
-                                     AliquotaIcmsST, Mva);
-
-            decimal valorICMSSTNormal = icms10.ValorIcmsST();
+            decimal valorICMSSTNormal = ValorIcmsSTNormal(BaseIcmsSTNormal());
 
             decimal valorICMSSTDesonerado = valorICMSSTNormal - ValorIcmsST();
 
-            return decimal.Round(valorICMSSTDesonerado, 2);
+            return decimal.Round(valorICMSSTDesonerado, 2, MidpointRounding.ToEven);
         }
         #endregion
     }

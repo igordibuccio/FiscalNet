@@ -27,12 +27,12 @@ namespace FiscalNet.Implementacoes.IPI
 
         public decimal CalcularBaseIPI()
         {
-            return decimal.Round(BaseCalculo.CalcularBaseIPI(),2);
+            return decimal.Round(BaseCalculo.CalcularBaseIPI(),2, MidpointRounding.ToEven);
         }
 
         public decimal ValorIPI()
         {
-            return decimal.Round((CalcularBaseIPI() * (AliquotaIPI/100)), 2);
+            return decimal.Round((CalcularBaseIPI() * (AliquotaIPI/100)), 2, MidpointRounding.ToEven);
         }
     }
 }

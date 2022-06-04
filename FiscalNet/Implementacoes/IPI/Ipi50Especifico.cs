@@ -22,7 +22,7 @@ namespace FiscalNet.Implementacoes.IPI
 
         public decimal ValorIPI()
         {
-            return decimal.Round((AliquotaPorUnidade * BaseCalculo), 2);
+            return decimal.Round((AliquotaPorUnidade * BaseCalculo), 2, MidpointRounding.ToEven);
         }
     }
 }

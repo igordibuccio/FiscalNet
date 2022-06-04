@@ -34,12 +34,12 @@ namespace FiscalNet.Implementacoes.PIS
 
         public decimal BasePis()
         {
-            return decimal.Round(BasePIS.CalcularBasePIS(),2);
+            return decimal.Round(BasePIS.CalcularBasePIS(),2, MidpointRounding.ToEven);
         }
 
         public decimal ValorPis()
         {
-            return decimal.Round((BasePis() * (AliquotaPIS/100)),2);
+            return decimal.Round((BasePis() * (AliquotaPIS/100)),2, MidpointRounding.ToEven);
         }
     }
 }

@@ -32,7 +32,7 @@ namespace FiscalNet.Implementacoes.PIS
                 ValorSeguro +
                 DespesasAcessorias -
                 ValorDesconto);
-            return decimal.Round(basePIS, 2);
+            return decimal.Round(basePIS, 2, MidpointRounding.ToEven);
         }
 
 

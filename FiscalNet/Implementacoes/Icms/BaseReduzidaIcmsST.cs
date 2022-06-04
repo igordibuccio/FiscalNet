@@ -27,7 +27,7 @@ namespace FiscalNet.Implementacoes.Icms
 
             decimal baseSTReduzida = baseST + ValorIPI;
 
-            return decimal.Round(baseSTReduzida,2);
+            return decimal.Round(baseSTReduzida,2, MidpointRounding.ToEven);
         }
     }
 }

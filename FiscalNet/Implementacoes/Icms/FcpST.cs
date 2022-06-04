@@ -19,7 +19,7 @@ namespace FiscalNet.Implementacoes.Icms
 
         public decimal ValorFCPST()
         {
-            return decimal.Round((AliquotaFCPST / 100 * BaseCalculoST), 2);
+            return decimal.Round((AliquotaFCPST / 100 * BaseCalculoST), 2, MidpointRounding.ToEven);
         }
     }
 }

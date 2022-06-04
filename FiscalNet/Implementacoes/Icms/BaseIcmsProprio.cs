@@ -36,7 +36,7 @@ namespace FiscalNet.Implementacoes.Icms
                 DespesasAcessorias +
                 ValorIpi -
                 ValorDesconto);
-            return decimal.Round(BaseIcmsProprio, 2);
+            return decimal.Round(BaseIcmsProprio, 2, MidpointRounding.ToEven);
         }
     }
 }

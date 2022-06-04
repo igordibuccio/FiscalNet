@@ -28,7 +28,7 @@ namespace FiscalNet.Implementacoes.IPI
                 ValorFrete +
                 ValorSeguro +
                 DespesasAcessorias);
-            return decimal.Round(baseIpi, 2);
+            return decimal.Round(baseIpi, 2, MidpointRounding.ToEven);
         }
     }
 }

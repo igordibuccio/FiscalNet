@@ -59,7 +59,7 @@ namespace FiscalNet.Implementacoes.Icms
 
             decimal valorIcmsDesonerado = valorIcmsNormal - ValorIcmsProprio();
 
-            return decimal.Round(valorIcmsDesonerado,2);
+            return decimal.Round(valorIcmsDesonerado,2, MidpointRounding.ToEven);
         }
     }
 }

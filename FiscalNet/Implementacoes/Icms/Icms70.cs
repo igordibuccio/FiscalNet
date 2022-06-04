@@ -69,7 +69,7 @@ namespace FiscalNet.Implementacoes.Icms
 
             decimal valorIcmsDesonerado = valorIcmsNormal - ValorIcmsProprio();
 
-            return decimal.Round(valorIcmsDesonerado, 2);
+            return decimal.Round(valorIcmsDesonerado, 2, MidpointRounding.ToEven);
         }
         #endregion
 
@@ -104,7 +104,7 @@ namespace FiscalNet.Implementacoes.Icms
 
             decimal valorICMSSTDesonerado = valorICMSSTNormal - ValorIcmsST();
 
-            return decimal.Round(valorICMSSTDesonerado, 2);
+            return decimal.Round(valorICMSSTDesonerado, 2, MidpointRounding.ToEven);
         }
         #endregion        
     }

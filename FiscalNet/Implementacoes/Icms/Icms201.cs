@@ -76,7 +76,7 @@ namespace FiscalNet.Implementacoes.Icms
         {
             decimal valorCreditoSN = (CalcularBaseIcmsProprio() * (PercentualCreditoSN / 100));
 
-            return decimal.Round(valorCreditoSN, 2);
+            return decimal.Round(valorCreditoSN, 2, MidpointRounding.ToEven);
         }
         #endregion
 

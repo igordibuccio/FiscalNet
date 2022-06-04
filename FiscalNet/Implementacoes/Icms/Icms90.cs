@@ -70,7 +70,7 @@ namespace FiscalNet.Implementacoes.Icms
             decimal valorIcmsProprio = new ValorIcmsProprio(CalcularBaseIcmsProprio(), AliquotaIcmsProprio)
                 .CalcularValorIcmsProprio();
 
-            return decimal.Round(valorIcmsProprio,2);
+            return decimal.Round(valorIcmsProprio,2, MidpointRounding.ToEven);
         }
 
         public decimal ValorIcmsProprioBaseReduzida()
@@ -78,7 +78,7 @@ namespace FiscalNet.Implementacoes.Icms
             decimal valorIcmsProprio = new ValorIcmsProprio(CalcularBaseReduzidaIcmsProprio(), AliquotaIcmsProprio)
                 .CalcularValorIcmsProprio();
 
-            return decimal.Round(valorIcmsProprio, 2);
+            return decimal.Round(valorIcmsProprio, 2, MidpointRounding.ToEven);
         }
 
         public decimal ValorIcmsProprioDesonerado()
@@ -90,7 +90,7 @@ namespace FiscalNet.Implementacoes.Icms
 
             decimal valorIcmsDesonerado = valorIcmsNormal - ValorIcmsProprioBaseReduzida();
 
-            return decimal.Round(valorIcmsDesonerado, 2);
+            return decimal.Round(valorIcmsDesonerado, 2, MidpointRounding.ToEven);
         }
         #endregion
 
@@ -128,7 +128,7 @@ namespace FiscalNet.Implementacoes.Icms
 
             decimal valorICMSSTDesonerado = valorICMSSTNormal - ValorICMSSTBaseReduzida();
 
-            return decimal.Round(valorICMSSTDesonerado, 2);
+            return decimal.Round(valorICMSSTDesonerado, 2, MidpointRounding.ToEven);
         }
         #endregion
 

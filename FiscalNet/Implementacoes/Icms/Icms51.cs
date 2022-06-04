@@ -70,14 +70,14 @@ namespace FiscalNet.Implementacoes.Icms
             decimal valorIcmsOperacao = ValorIcmsOperacao();
             decimal valorIcmsDiferido = (valorIcmsOperacao * (PercentualDiferimento / 100));
             
-            return decimal.Round(valorIcmsDiferido,2);
+            return decimal.Round(valorIcmsDiferido,2, MidpointRounding.ToEven);
         }
 
         public decimal ValorIcmsProprio() 
         {
             decimal valorIcmsProprio = ValorIcmsOperacao() - ValorIcmsDiferido();
             
-            return decimal.Round(valorIcmsProprio,2);        
+            return decimal.Round(valorIcmsProprio,2, MidpointRounding.ToEven);        
         }
     }
 }
