@@ -7,7 +7,7 @@ namespace FiscalNet.Implementacoes.PIS
 {
     public class Pis03 : IPis03
     {
-        // A Base de PIS será a Quantidade (qTrib) do produto na operação
+        //  A Base de PIS será a Quantidade (qTrib) do produto na operação
         private decimal BaseCalculo { get; set; }
         // Valor por Unidade Tributável
         private decimal AliquotaPorUnidade { get; set; }
