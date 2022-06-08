@@ -15,10 +15,10 @@ namespace FiscalNetTestes.Icms
         public void TestarIcms10()
         {
             decimal valorProduto = 135.00M;
-            decimal valorFrete = 7.50M;
-            decimal valorSeguro = 3.00M;
-            decimal despesasAcessorias = 1.50M;
-            decimal valorDesconto = 13.50M;
+            decimal valorFrete = 4.74M;
+            decimal valorSeguro = 1.89M;
+            decimal despesasAcessorias = 0.95M;
+            decimal valorDesconto = 2.370M;
             decimal valorIpi = 15.00M;
             decimal aliquotaIcmsProprio = 12.00M;
             decimal aliquotaIcmsST = 18.00M;
@@ -38,10 +38,10 @@ namespace FiscalNetTestes.Icms
 
             decimal vICMSSTDeson = icms10.ValorICMSSTDesonerado();
 
-            Assert.IsTrue(vBC.Equals(133.50M));
-            Assert.IsTrue(vICMS.Equals(16.02M));
-            Assert.IsTrue(vBCST.Equals(183.99M));
-            Assert.IsTrue(vICMSST.Equals(17.10M));
+            Assert.IsTrue(vBC.Equals(140.21M));
+            Assert.IsTrue(vICMS.Equals(16.83M));
+            Assert.IsTrue(vBCST.Equals(192.48M));
+            Assert.IsTrue(vICMSST.Equals(17.82M));
         }
 
     }
