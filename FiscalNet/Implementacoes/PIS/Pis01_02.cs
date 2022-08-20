@@ -13,6 +13,7 @@ namespace FiscalNet.Implementacoes.PIS
         private decimal DespesasAcessorias { get; set; }
         private decimal ValorDesconto { get; set; }
         private decimal AliquotaPIS { get; set; }
+        private decimal ValorIcms { get; set; }
         private BasePIS BasePIS { get; set; }
 
         public Pis01_02(decimal valorProduto,
@@ -20,7 +21,8 @@ namespace FiscalNet.Implementacoes.PIS
             decimal valorSeguro,
             decimal despesasAcessorias,
             decimal valorDesconto,
-            decimal aliquotaPIS)
+            decimal aliquotaPIS,
+            decimal valorIcms = 0)
         {
             this.ValorProduto = valorProduto;
             this.ValorFrete = valorFrete;
@@ -28,8 +30,9 @@ namespace FiscalNet.Implementacoes.PIS
             this.DespesasAcessorias = despesasAcessorias;
             this.ValorDesconto = valorDesconto;
             this.AliquotaPIS = aliquotaPIS;
+            this.ValorIcms = valorIcms;
             this.BasePIS = new BasePIS(ValorProduto, ValorFrete, ValorSeguro,
-                DespesasAcessorias, ValorDesconto);
+                DespesasAcessorias, ValorDesconto, ValorIcms);
         }
 
         public decimal BasePis()

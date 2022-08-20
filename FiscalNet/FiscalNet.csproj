@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <Version>2022.8.1</Version>
+    <Version>2022.8.2</Version>
     <Authors>SACFiscal</Authors>
     <Company>SACFiscal &amp; Automação</Company>
     <Description>Brazilian Tax Library</Description>
@@ -12,8 +12,8 @@
     <LangVersion>preview</LangVersion>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>D:\Users\Marco Polo\Pictures\SACFiscal\sacfiscal</AssemblyOriginatorKeyFile>
-    <AssemblyVersion>2022.8.1</AssemblyVersion>
-    <FileVersion>2022.8.1</FileVersion>
+    <AssemblyVersion>2022.8.2</AssemblyVersion>
+    <FileVersion>2022.8.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

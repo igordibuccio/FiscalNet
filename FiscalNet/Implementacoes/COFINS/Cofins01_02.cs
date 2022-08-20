@@ -13,6 +13,7 @@ namespace FiscalNet.Implementacoes.COFINS
         private decimal DespesasAcessorias { get; set; }
         private decimal ValorDesconto { get; set; }
         private decimal AliquotaCofins { get; set; }
+        private decimal ValorIcms { get; set; }
         private BaseCofins BaseCOFINS { get; set; }
 
         public Cofins01_02(decimal valorProduto,
@@ -20,7 +21,8 @@ namespace FiscalNet.Implementacoes.COFINS
             decimal valorSeguro,
             decimal despesasAcessorias,
             decimal valorDesconto,
-            decimal aliquotaCOFINS)
+            decimal aliquotaCOFINS,
+            decimal valorIcms = 0)
         {
             this.ValorProduto = valorProduto;
             this.ValorFrete = valorFrete;
@@ -28,8 +30,9 @@ namespace FiscalNet.Implementacoes.COFINS
             this.DespesasAcessorias = despesasAcessorias;
             this.ValorDesconto = valorDesconto;
             this.AliquotaCofins = aliquotaCOFINS;
+            this.ValorIcms = valorIcms;
             this.BaseCOFINS = new BaseCofins(ValorProduto, ValorFrete, ValorSeguro,
-                DespesasAcessorias, ValorDesconto);
+                DespesasAcessorias, ValorDesconto, ValorIcms);
         }
 
         public decimal BaseCofins()
