@@ -1,0 +1,50 @@
+﻿using FiscalNet.Implementacoes.IBSCBS;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace FiscalNetTestes.IBSCBS
+{
+    [TestClass]
+    public class BaseIbsCbsTest
+    {
+        [TestMethod]
+        public void TestarBaseIbsCbs()
+        {
+            decimal valorProduto = 135.00M;
+            decimal valorServico = 0;
+            decimal valorFrete = 10.00M;
+            decimal valorSeguro = 4.00M;
+            decimal despesasAcessorias = 2.00M;
+            decimal valorImpostoImportacao = 0;
+            decimal valorDesconto = 5.00M;
+            decimal valorPis = 1.98M;
+            decimal valorCofins = 9.10M;
+            decimal valorIcms = 26.28M;
+            decimal valorIcmsUfDest = 0;
+            decimal valorFcp = 2.92M;
+            decimal valorFcpUfDest = 0;
+            decimal valorIcmsMonofasico = 0;
+            decimal valorIssqn = 0;
+            decimal valorIS = 0;
+
+
+            BaseIbsCbs baseIbsCbs = new BaseIbsCbs(valorProduto,
+                valorServico,
+                valorFrete,
+                valorSeguro,
+                despesasAcessorias,
+                valorImpostoImportacao,
+                valorDesconto,
+                valorPis,
+                valorCofins,
+                valorIcms,
+                valorIcmsUfDest,
+                valorFcp,
+                valorFcpUfDest,
+                valorIcmsMonofasico,
+                valorIssqn,
+                valorIS);
+
+            Assert.IsTrue(baseIbsCbs.CalcularBaseIbsCbs().Equals(105.72M));
+        }
+    }
+}

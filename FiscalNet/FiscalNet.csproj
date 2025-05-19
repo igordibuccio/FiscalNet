@@ -11,13 +11,13 @@
     <RepositoryType>git</RepositoryType>
     <LangVersion>preview</LangVersion>
     <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>D:\Users\Marco Polo\Pictures\SACFiscal\sacfiscal</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>C:\Users\Marco Polo\OneDrive - sacfiscal.com.br\SACFiscal\sacfiscal</AssemblyOriginatorKeyFile>
     <AssemblyVersion>2022.8.2</AssemblyVersion>
     <FileVersion>2022.8.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="D:\Users\Marco Polo\Pictures\SACFiscal\BioSACBorder140.png">
+    <None Include="..\..\..\..\Pictures\BioSACBorder140.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
